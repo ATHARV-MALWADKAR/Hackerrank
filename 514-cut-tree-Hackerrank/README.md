@@ -1,0 +1,15 @@
+# [Cut Tree](https://www.hackerrank.com/challenges/cuttree/problem?isFullScreen=true)
+## Medium
+<div class="challenge-body-html"><div class="challenge_problem_statement"><div class="msB challenge_problem_statement_body"><div class="hackdown-content"><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><p>Given a tree <em>T</em> with <em>n</em> nodes, how many subtrees (<em>T'</em>) of <em>T</em> have at most <em>K</em> edges connected to (T - T')? </p></div></div></div><div class="challenge_input_format"><div class="msB challenge_input_format_title"><p><strong>Input Format</strong></p></div><div class="msB challenge_input_format_body"><div class="hackdown-content"><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><p>The first line contains two integers <em>n</em> and <em>K</em> followed by <em>n-1</em> lines each containing two integers a &amp; b denoting that there's an edge between a &amp; b.</p></div></div></div><div class="challenge_constraints"><div class="msB challenge_constraints_title"><p><strong>Constraints</strong></p></div><div class="msB challenge_constraints_body"><div class="hackdown-content"><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><p>1 &lt;= K &lt;= n &lt;= 50 <br>
+Every node is indicated by a distinct number from 1 to n.</p></div></div></div><div class="challenge_output_format"><div class="msB challenge_output_format_title"><p><strong>Output Format</strong></p></div><div class="msB challenge_output_format_body"><div class="hackdown-content"><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><p>A single integer which denotes the number of possible subtrees.</p></div></div></div><div class="challenge_sample_input"><div class="msB challenge_sample_input_title"><p><strong>Sample Input</strong></p></div><div class="msB challenge_sample_input_body"><div class="hackdown-content"><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><pre><code>3 1
+2 1
+2 3
+</code></pre></div></div></div><div class="challenge_sample_output"><div class="msB challenge_sample_output_title"><p><strong>Sample Output</strong></p></div><div class="msB challenge_sample_output_body"><div class="hackdown-content"><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><pre><code>6
+</code></pre></div></div></div><div class="challenge_explanation"><div class="msB challenge_explanation_title"><p><strong>Explanation</strong></p></div><div class="msB challenge_explanation_body"><div class="hackdown-content"><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><p>There are 2^3 possible sub-trees:   </p>
+
+<p>{} {1} {2} {3} {1, 2} {1, 3} {2, 3} {1, 2, 3}</p>
+
+<p>But: <br>
+the sub-trees {2} and {1,3} are not valid. 
+{2} isn't valid because it has 2 edges connecting to it's complement {1,3} whereas K = 1 in the sample test-case
+{1,3} isn't valid because, well, it's not a sub-tree. The nodes aren't connected.</p></div></div></div></div>
